@@ -6,7 +6,9 @@ const app = express();
 const port = 4000;
 
 app.use(cors());
-app.use("/", indexRouter);
+app.use(express.static("public"));
+
+app.use("", indexRouter);
 
 app.listen(port, () => {
   console.log(`켜짐 포트 ${port}`);
